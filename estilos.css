@@ -1,0 +1,339 @@
+/* =========================================
+   1. Configuración Global y Reset
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff9f1; 
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   2. Estructura Principal
+   ========================================= */
+.page-wrapper {
+    background-color: #fff9f1; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+    overflow: hidden; /* Asegura que las franjas no se salgan */
+}
+
+.container-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.section {
+    padding: 40px 0; 
+}
+
+/* =========================================
+   3. Fondos de Sección
+   ========================================= */
+.science-section,
+.footer-grid {
+    background-color: #ffffff; /* Fondo Blanco */
+}
+
+.talent-section {
+    background-color: #fff9f1; /* Fondo Beige */
+}
+
+/* =========================================
+   4. Layout (Columnas con inline-block)
+   ========================================= */
+.two-column {
+    text-align: center; 
+    width: 100%;
+    font-size: 0; 
+}
+
+.text-content,
+.image-content,
+.form-content,
+.video-content {
+    display: inline-block;
+    width: 48%;
+    margin: 0 1%;
+    vertical-align: top;    
+    text-align: left;       
+    font-size: 16px;   
+    border-radius: 10px;   
+}
+
+/* =========================================
+   5. Encabezado y Navegación
+   ========================================= */
+.top-pink-bar {
+    height: 10px;
+    background-color: #ff3281; 
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 30px; 
+    background-color: #fff9f1; 
+}
+
+.header-main .logo img {
+    height: 60px; 
+    width: auto;
+}
+
+.header-main .social-icons a {
+    margin-left: 15px;
+}
+
+.header-main .social-icons img {
+    height: 30px; 
+    width: 30px;
+    object-fit: contain;
+}
+
+.nav-container {
+    padding: 0 30px 25px 30px; 
+    background-color: #fff9f1; 
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #000000; 
+    border-radius: 5px;
+    background-color: #fff9f1; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* =========================================
+   6. Sección Hero
+   ========================================= */
+.hero-section {
+    background-image: url('imagenes/fondopiedras.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.hero-buttons .btn {
+    margin: 0 10px;
+}
+
+/* =========================================
+   7. Botones
+   ========================================= */
+.btn {
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ff3281; 
+    color: #ffffff;
+    border: 2px solid #ff3281;
+}
+.btn-primary:hover {
+    background-color: #e02b70;
+    border-color: #e02b70;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.btn-black {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+.btn-black:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* =========================================
+   8. Títulos y Texto
+   ========================================= */
+.section-title { 
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.talent-section .jobs-list h3 { 
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.science-section .text-content p,
+.talent-section .jobs-list p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* =========================================
+   9. Formulario de Contacto
+   ========================================= */
+.subheading-form {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* El <p> contenedor es negro y negrita */
+.contact-info {
+    color: #333; 
+    font-weight: bold;
+    font-size: 1em;
+    margin: 8px 0;
+}
+
+/* El <span> interno es rosa */
+.contact-info .label-pink {
+    color: #ff3281; /* Color rosa */
+}
+
+.form-group {
+    background-color: #ffffff;
+    border: 3px solid #ff3281; 
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.form-content label {
+    display: block;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-content input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #a0c4ff; 
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-content input[type="email"]::placeholder {
+    color: #999;
+}
+
+.btn-submit {
+    margin-top: 15px; 
+    width: 100%;
+}
+
+.error-message {
+    color: #cc0000;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none; 
+}
+
+/* =========================================
+   10. Video
+   ========================================= */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================================
+   11. Footer Final
+   ========================================= */
+.footer-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #fff9f1; 
+    border-top: none; 
+}
+
+.footer-bar .logo img {
+    height: 60px; 
+    width: auto;
+}
+
+.footer-bar .footer-credits {
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.footer-bar .footer-credits p {
+    color: #ff3281; 
+    line-height: 1.4;
+}
+
